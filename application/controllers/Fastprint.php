@@ -8,7 +8,6 @@ class Fastprint extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		// Your own constructor code
 		$this->load->model('Product');
 	}
 
@@ -107,8 +106,7 @@ class Fastprint extends CI_Controller
 		$url = 'https://recruitment.fastprint.co.id/tes/api_tes_programmer';
 		$header = get_headers($url, true);
 		$username = explode(" ", $header['X-Credentials-Username']);
-//		$password = md5('bisacoding-' . date('d-m-y'));
-		$password = md5('bisacoding-10-05-23');
+		$password = md5('bisacoding-' . date('d-m-y'));
 
 		$this->load->library('HttpClient', array(
 			'headers' => array(
@@ -120,8 +118,6 @@ class Fastprint extends CI_Controller
 			),
 			'url' => $url,
 		));
-//		var_dump($password);
-//		die();
 		if ($this->httpclient->post()) {
 			$result = json_decode($this->httpclient->getResults(), true);
 			return $data = $result['data'];
