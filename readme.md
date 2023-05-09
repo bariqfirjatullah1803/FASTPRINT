@@ -1,3 +1,7 @@
+## Example
+
+http://fastprint.bariqfirjatullah.my.id/
+
 ## Description
 
 FastPrint is built using the CodeIgniter 3 framework with a MySQL database. For the front-end, the application uses HTML, CSS, and JavaScript. FastPrint is also integrated with online payment services using Midtrans Payment Gateway.
